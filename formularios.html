@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Formularios - Centro de Control</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function abrirVentanaFormulario(url) {
+            window.open(url, '_blank', 'toolbar=0,location=0,menubar=0,width=800,height=600');
+        }
+    </script>
+    <style>
+        /* Configuración para el contenedor de la página */
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1; /* Hace que el contenido principal ocupe el espacio restante */
+        }
+
+        .button-large {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            background-color: #4b80a1; /* Color del botón */
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            margin: 2rem 0; /* Espaciado arriba y abajo */
+            animation: parpadeo 3s infinite; /* Efecto de parpadeo más lento (3s) */
+        }
+
+        .button-large:hover {
+            background-color: #043e7a; /* Color al pasar el ratón */
+        }
+
+        @keyframes parpadeo {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+
+        /* Espacio adicional entre formularios */
+        .formularios h2:nth-of-type(2) {
+            margin-top: 3rem; /* Más espacio entre el primer formulario y el título del segundo */
+        }
+
+        /* Pie de página con fondo del mismo color que el encabezado */
+        footer {
+            background-color: var(--catalina-blue); /* Fondo igual que el encabezado */
+            color: white; /* Texto blanco */
+            text-align: center;
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Formularios del Centro de Control</h1>
+    </header>
+
+    <!-- Navegación entre formularios y tableros -->
+    <nav class="nav-links">
+        <a href="tableros.html">Ir a los Tableros</a>
+        <a href="index.html">Inicio</a>
+    </nav>
+
+    <!-- Formularios con tamaño más grande -->
+    <main>
+        <section class="formularios">
+            <h2>Formulario: Registros Centro de Control</h2>
+            <iframe width="1800px" height="900px" src="https://forms.office.com/r/v0RG9yRpDP" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen></iframe>
+
+            <h2>Formulario: Registros Novedades Técnicos</h2>
+            <!-- Botón con efecto de parpadeo más lento -->
+            <button class="button-large" onclick="abrirVentanaFormulario('https://forms.office.com/r/kQmTz2NZu2')">Abrir Formulario de Novedades Técnicos</button>
+        </section>
+    </main>
+
+    <!-- Pie de página al final con texto en blanco -->
+    <footer>
+        <p>Centro de Control - © 2024 - 2025</p>
+    </footer>
+</body>
+</html>

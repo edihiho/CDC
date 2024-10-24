@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Centro de Control</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Pie de página con fondo del mismo color que el encabezado */
+        footer {
+            background-color: var(--catalina-blue); /* Mismo color que el encabezado */
+            color: white; /* Texto blanco */
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed; /* Asegura que el pie de página esté al fondo */
+            width: 100%; /* Ocupa todo el ancho */
+            bottom: 0; /* Se posiciona en la parte inferior de la página */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Centro de Control</h1>
+        <p>Consulta los formularios y tableros del Centro de Control.</p>
+    </header>
+
+    <main>
+        <!-- Contenedor centrado para los botones -->
+        <div class="container">
+            <div class="card">
+                <h2>Formularios Centro de Control</h2>
+                <a href="formularios.html">Ir a los Formularios</a>
+            </div>
+            <div class="card">
+                <h2>Tableros Centro de Control</h2>
+                <a href="tableros.html">Ir a los Tableros</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Mosaico de Imágenes en movimiento horizontal, pero más pequeño -->
+    <section class="mosaic">
+        <div class="mosaic-slider">
+            <div class="mosaic-track">
+                <div class="mosaic-item"><img src="img/img1.jpg" alt="Imagen 1"></div>                
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>Centro de Control - © 2024 - 2025</p>
+    </footer>    
+</body>
+</html>
